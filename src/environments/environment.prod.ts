@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  templateApiUrl: "https://n1.powerflow.cloud/output-engine/file/",
-  authApiUrl: "https://n1.powerflow.cloud/output-engine/login",
+  templateApiUrl: "http://defineBack-end-url/file/",
+  authApiUrl: "http://defineBack-end-url//login",
   permittedFileSize: 800000
 };

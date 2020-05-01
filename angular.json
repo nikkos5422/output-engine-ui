@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "power-flow": {
+    "work-flow": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "power-flow:build"
+            "browserTarget": "work-flow:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "power-flow:build:production"
+              "browserTarget": "work-flow:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "power-flow:build"
+            "browserTarget": "work-flow:build"
           }
         },
         "test": {
@@ -109,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "power-flow:serve"
+            "devServerTarget": "work-flow:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "power-flow:serve:production"
+              "devServerTarget": "work-flow:serve:production"
             }
           }
         }
@@ -231,5 +231,5 @@
         }
       }
     }},
-  "defaultProject": "power-flow"
+  "defaultProject": "work-flow"
 }
