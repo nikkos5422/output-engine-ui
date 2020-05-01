@@ -1,0 +1,25 @@
+<html>
+  <!-- TODO style v html -->
+
+  <body style="background-color:#e6ffff;">
+    <div style="text-align:center">
+      <h3>Login Form</h3>
+      <div *ngIf="invalidCredentialMsg" [ngClass]="error">
+        <i>{{ invalidCredentialMsg }}</i>
+      </div>
+      <div>
+        <form [formGroup]="loginForm" (ngSubmit)="validateCredentials()">
+          <!-- TODO pouzivej radeji na stylovani scss -->
+          <p><b>User Name: </b> <input formControlName="username" /></p>
+          <p>
+            <b>Password:</b><input type="password" formControlName="password" />
+          </p>
+          <p>
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <html></html>
+</html>

@@ -1,0 +1,21 @@
+<div>
+  <h2>Edit Template</h2>
+  <form [formGroup]="editForm" (ngSubmit)="editFile()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input formControlName="name" placeholder="name" name="name" id="name" />
+    </div>
+
+    <div>
+      <label for="description">Description:</label>
+      <input
+        formControlName="description"
+        placeholder="description"
+        name="description"
+        id="description"
+      />
+    </div>
+
+    <button mat-raised-button color="primary">Update</button>
+  </form>
+</div>

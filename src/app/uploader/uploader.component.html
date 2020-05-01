@@ -1,0 +1,62 @@
+<html>
+  <body>
+    <mat-card>
+      <mat-card-content>
+        <div class="synopsis">
+          <h1>Jasper file uploader</h1>
+
+          <h2>Please select a file to upload with max size 1 MB.</h2>
+
+          <form #templateForm="ngForm" (ngSubmit)="upload()">
+            <div>
+              <button
+                mat-raised-button
+                color="accent"
+                (click)="imgFileInput.click()"
+              >
+                Choose template
+              </button>
+
+              <input
+                hidden
+                type="file"
+                #imgFileInput
+                (change)="setFile($event)"
+              />
+              <mat-error *ngIf="!isValid()">
+                The file exceeds its maximum permitted size, please select
+                another one.
+              </mat-error>
+            </div>
+            <br /><br />
+            <span><i>Name: &nbsp;</i></span>
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="name"
+              maxlength="15"
+              required
+            />
+            <br /><span><i> Description:&nbsp;</i></span>
+            <input
+              type="text"
+              name="description"
+              [(ngModel)]="description"
+              maxlength="50"
+              required
+            />
+            <br /><br />
+
+            <button
+              mat-raised-button
+              color="primary"
+              [disabled]="!selectedFiles || !templateForm.form.valid"
+            >
+              Upload
+            </button>
+          </form>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </body>
+</html>
